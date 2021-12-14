@@ -40,3 +40,11 @@ export const getInvoice = number => {
     invoice => invoice.number === number
   );
 }
+
+export const deleteInvoice = number => {
+  invoices = invoices.filter(invoice => invoice.number !== number);
+}
+
+export const addInvoice = invoice => {
+  invoices = [...invoices, invoice];
+}
