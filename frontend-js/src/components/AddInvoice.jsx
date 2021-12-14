@@ -1,28 +1,31 @@
 import { useState } from 'react';
 
-const AddInvoice = ({invoice}) => {
-  const [name, setName] = useState('');
+const AddInvoice = ({invoice, dataaaaa}) => {
+  const [name, setName] = useState('tt');
   const [number, setNumber] = useState(0);
   const [amount, setAmount] = useState('0');
-  const [due, setDue] = useState('');
-
+  const [due, setDue] = useState('tty');
+// console.log("setInvoices",dataaaaa())
   const onSubmit = e => {
     e.preventDefault();
 
-    if(!(name || number || amount || due)) {
+    if(!(name && number && amount && due)) {
       alert('Please add missing value');
       return;
     }
 
     invoice({name, number, amount, due});
+    // dataaaaa({name, number, amount, due})
+    // kks()
 
-    // setName('');
-    // setNumber(0);
-    // setAmount('0');
-    // setDue('');
+    setName('');
+    setNumber(0);
+    setAmount('0');
+    setDue('');
 
   }
   return(
+    <>
     <form onSubmit={onSubmit}>
     <label>Name</label>
     <input type='text' placeholder='Enter name' value={name} onChange={e=> setName(e.target.value)} />
@@ -35,6 +38,8 @@ const AddInvoice = ({invoice}) => {
 
     <input type='submit' value='Save Invoice' />
     </form>
+    {/* <p>{dataaaaa(name)}</p> */}
+    </>
   );
 }
 
