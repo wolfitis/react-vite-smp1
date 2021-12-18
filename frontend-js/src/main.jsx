@@ -6,6 +6,8 @@ import App from "./App";
 import Expenses from "./routes/expenses";
 import Invoices from "./routes/invoices";
 import Invoice from "./routes/invoice";
+import ShowA from "./routes/showA";
+import ShowB from "./routes/showB";
 
 // From React docs:
 // StrictMode is a tool for highlighting potential problems in an application. Like Fragment, StrictMode does not render any visible UI. It activates additional checks and warnings for its descendants
@@ -26,6 +28,11 @@ ReactDOM.render(
             </main>
           }/>
             <Route path=":invoiceId" element={<Invoice />} />
+          </Route>
+          <Route path='showa' element={<ShowA />}>
+
+          </Route>
+          <Route path='showb' element={<ShowB />}>
           </Route>
           <Route
             path="*"

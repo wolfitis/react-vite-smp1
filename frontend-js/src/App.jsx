@@ -15,7 +15,9 @@ function App() {
         }}
       >
         <Link to="/invoices">Invoices</Link> |{" "}
-        <Link to="/expenses">Expenses</Link>
+        <Link to="/expenses">Expenses</Link> | {' '}
+        <Link to='/showa'>Show A</Link> | {' '}
+        <Link to='/showb'>Show B</Link>
       </nav>
       {/* Outlet helps persisting parent route, while swapping children */}
       <Outlet />
